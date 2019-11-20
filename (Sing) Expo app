@@ -1,0 +1,67 @@
+// Button consist two props: title and onPress
+
+import React from 'react';
+import { View, Alert, Button, StyleSheet } from 'react-native';
+
+export default class HandlingTouchesComponent extends React.Component {
+  _onPress1() {
+    fetch('http://bot7.seattleacademy.software/sing?song=[69,100]')
+    Alert.alert('sing');
+  }
+  _onPress2() {
+    fetch('http://bot7.seattleacademy.software/sing?song=[69,100]')
+    Alert.alert('sing');
+  }
+
+  _onPress3() {
+    fetch('http://bot7.seattleacademy.software/sing?song=[69,100]')
+    Alert.alert('sing');
+  }
+
+
+  _onPress() {
+   fetch('http://bot7.seattleacademy.software/sing?song=[69,100]')
+    Alert.alert('sing');
+  }
+
+
+  render() {
+    return (
+      <View style= {styles.container}>
+        <View style= {styles.button}>
+          <Button 
+            title='sing' 
+            onPress={this._onPress1}  
+          />
+        </View>
+        <View style= {styles.button}>
+          <Button 
+            title='Button 2' 
+            onPress={this._onPress}
+          />
+        </View>
+        <View style= {styles.containerButton}>
+          <Button
+            title='Button 3' 
+            onPress={this._onPress}
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+
+    },
+    containerButton: {
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+    },
+    button: {
+      margin: 20
+    }
+});
